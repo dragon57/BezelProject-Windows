@@ -1,0 +1,67 @@
+<mamelayout version="2">
+  <element name="Artwork_1">
+    <image file="..\pulsar.png" />
+  </element>
+ <element name="screen_bezel">
+    <image file="..\vert_screen_bezel.png" />
+  </element>
+ <element name="vert_screen_bezel_glass">
+    <image file="..\vert_screen_bezel_glass.png" />
+  </element>
+ <element name="vert_screen_mask">
+    <image file="..\vert_screen_mask.png" />
+  </element>
+ <element name="vert_screen_glass">
+    <image file="..\vert_glass.png" />
+  </element>
+   <view name="Full">
+    <screen index="0">
+      <bounds x="555" y="10" width="810" height="1070"/>
+    </screen>
+    <bezel element="Artwork_1">
+      <bounds x="0" y="0" width="1920" height="1080" />
+    </bezel>
+  </view>
+   <view name="Glass">
+    <screen index="0">
+      <bounds x="555" y="10" width="810" height="1070"/>
+    </screen>
+   <backdrop element="vert_screen_glass">
+      <bounds x="555" y="0" width="810" height="1080" />
+    </backdrop>
+    <overlay element="vert_screen_mask">
+      <bounds x="555" y="0" width="810" height="1080" />
+    </overlay>
+    <bezel element="Artwork_1">
+      <bounds x="0" y="0" width="1920" height="1080" />
+    </bezel>
+  </view>
+   <view name="Framed">
+    <screen index="0">
+      <bounds x="593" y="45" width="735" height="990" />
+    </screen>
+   <backdrop element="screen_bezel">
+      <bounds x="555" y="0" width="810" height="1080" />
+    </backdrop>
+    <overlay element="vert_screen_mask">
+      <bounds x="593" y="40" width="735" height="1000" />
+    </overlay>
+    <bezel element="Artwork_1">
+      <bounds x="0" y="0" width="1920" height="1080" />
+    </bezel>
+  </view>
+   <view name="Framed_Glass">
+    <screen index="0">
+      <bounds x="593" y="45" width="735" height="990" />
+    </screen>
+   <backdrop element="vert_screen_bezel_glass">
+      <bounds x="555" y="0" width="810" height="1080" />
+    </backdrop>
+    <overlay element="vert_screen_mask">
+      <bounds x="593" y="40" width="735" height="1000" />
+    </overlay>
+    <bezel element="Artwork_1">
+      <bounds x="0" y="0" width="1920" height="1080" />
+    </bezel>
+  </view>
+</mamelayout>
