@@ -13,6 +13,9 @@ strNewText = Replace(strText, "config_save_on_exit = ""true""", "config_save_on_
 Set oRegExp = New RegExp
 oRegExp.Pattern = "input_overlay = ""[^""]+"""
 strNewText = oRegExp.Replace(strNewText, "input_overlay = """"")
+Set oRegExp = New RegExp
+oRegExp.Pattern = "input_overlay_opacity = ""[^""]+"""
+strNewText = oRegExp.Replace(strNewText, "input_overlay_opacity = ""1.000000""")
 
 'Write the file again
 Set objFile = objFSO.OpenTextFile(strFileName, ForWriting)
